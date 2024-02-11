@@ -1,0 +1,28 @@
+.mainContent {
+    height: 550px;
+    width: 500px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #5b3e31;
+    border-radius: 10px;
+
+}
+
+.btn{
+    color: black;
+    font-weight: 600;
+    height: 40px;
+}
+.btn:hover{
+    cursor: pointer;
+}
+
+.rightSection {
+    flex: 1
+}
+
+.leftSection {
+    flex: 1
+}
