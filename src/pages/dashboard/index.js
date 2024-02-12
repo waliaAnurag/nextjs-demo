@@ -4,6 +4,7 @@ import styles from "../../styles/dashboard.module.css"
 import pageStyles from "../../styles/page.module.css"
 import ListItems from '@/component/listItems';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 function Dashboard(props) {
 
@@ -26,7 +27,7 @@ function Dashboard(props) {
                 <title>Trending Books</title>
             </Head>
             <header>
-                <h1>Trending Book Library</h1>
+                <div><Link href={"/"}> <button type='button' className={`${pageStyles.btn} ${styles.navigationLinkStyles}`}> Home</button></Link><center><h1>Trending Book Library</h1></center></div>
             </header>
             <main className={styles.mainContentSectionStyles}>
                 <center>

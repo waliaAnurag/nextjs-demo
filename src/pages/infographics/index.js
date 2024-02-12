@@ -14,9 +14,8 @@ export default function NextjsInfoGraphics() {
                 sizes="100vw"
                 style={{ width: '100%', height: 'auto' }}
                 alt="cover image"
+                priority={true}
             />
-
-
         </center>
 
     )

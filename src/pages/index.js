@@ -4,6 +4,7 @@ import coverImage from '../asset/coverImage.jpg'
 import styles from "../styles/page.module.css";
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import dashboardStyles from "../styles/dashboard.module.css"
 function LandingPage() {
   const router = useRouter();
 
@@ -23,13 +24,13 @@ function LandingPage() {
           src={coverImage}
           width={400}
           height={300}
-          style={{ borderRadius: '50%' }}
+          style={{ borderRadius: '50%',boxShadow:"3px 3px 5px 0px black"  }}
           alt="cover image"
         />
         <div>
           <div style={{ paddingTop: "20px" }}> See the top trending book information. Click Below to explore</div>
           <div style={{ paddingTop: "20px" }}>
-            <button type='button' className={styles.btn} onClick={handleClick}> Click to explore !</button>
+            <button type='button' className={`${styles.btn} ${dashboardStyles.btnCustomStyles}`} onClick={handleClick}> Click to explore !</button>
           </div>
         </div>
       </center>

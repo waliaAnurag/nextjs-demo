@@ -4,7 +4,7 @@ import pageStyles from "../../../styles/page.module.css";
 import Image from 'next/image'
 import { getTrendingBooksData, getBookReview } from "@/helpers/api-utils";
 import ReviewSection from '@/component/reviewSection';
-
+import Link from 'next/link';
 function BookInformation(props) {
  
   const { bookData, bookId, reviewList } = props;
@@ -45,17 +45,19 @@ function BookInformation(props) {
       
       tempBookReview.push(data.review)
       setBookReview(tempBookReview)
+      setReviewText('')
     });
   }
   return (
     <center >
       <div className={dashboardStyles.bookDetailContainer}>
+      <div style={{marginLeft : "20px"}}><Link href={"/dashboard"}> <button type='button' className={`${pageStyles.btn} ${dashboardStyles.navigationLinkStyles}`}>Dashboard</button></Link></div>
         <div>
           <Image
             src={image}
             width={350}
             height={500}
-            style={{ borderRadius: "5px" }}
+            style={{ borderRadius: "5px", boxShadow:"3px 3px 5px 0px black" }}
             alt="cover image"
           />
         </div>
@@ -72,7 +74,7 @@ function BookInformation(props) {
 
         </div>
         <div className={dashboardStyles.reviewInformation}>
-          <textarea type="text" placeholder='Add your Book review here' onChange={handleInput} />
+          <textarea type="text" value={reviewText} placeholder='Add your Book review here' style={{padding : "10px", borderRadius:"5px" }} onChange={handleInput} />
           <div className={dashboardStyles.buttonpos}>
             <button type='button' className={`${pageStyles["btn"]} ${dashboardStyles["btnCustomStyles"]}`} onClick={postreview}>Add your review</button>
           </div>
