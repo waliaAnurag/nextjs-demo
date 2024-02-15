@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import coverImage from '../asset/coverImage.jpg'
+import coverImage from '../asset/homeScreenPlantImage.jpg'
 import styles from "../styles/page.module.css";
 import { useRouter } from 'next/router';
 import Head from 'next/head';
@@ -14,27 +14,46 @@ function LandingPage() {
   }
 
   return (
-    <div className={styles.mainContent}>
+
+
+    <div
+      style={{
+        // use relative position for the parent div
+        position: "relative",
+        width: "100vw",
+        height: "100vh",
+      }}
+    >
       <Head>
-      <title>Trending Book Library</title>
-    </Head>
-      <div style={{ textAlign: "center" }}><h1> Trending Book Library </h1>  </div>
-      <center>
-        <Image
-          src={coverImage}
-          width={400}
-          height={300}
-          style={{ borderRadius: '50%',boxShadow:"3px 3px 5px 0px black"  }}
-          alt="cover image"
-        />
-        <div>
-          <div style={{ paddingTop: "20px" }}> See the top trending book information. Click Below to explore</div>
-          <div style={{ paddingTop: "20px" }}>
-            <button type='button' className={`${styles.btn} ${dashboardStyles.btnCustomStyles}`} onClick={handleClick}> Click to explore !</button>
+        <title>Trending Books Library</title>
+      </Head>
+      <Image
+        src={coverImage}
+        fill={true}
+        priority={true}
+        alt={"Background Image"}
+      />
+      <div style={{
+        position : 'absolute',
+        top: "20%",
+        left: "20%",
+        
+      }}>
+        <span style={{fontSize:"25px"}}> Trending Books Library</span>
+         <div style={{marginTop: "30px", fontSize:"15px", color: "#b9b3b1"}}>
+            Find all trending books and download before they appear on store
+         </div>
+      </div>
+      <div className={styles.overLayText}>
+               <span> Curious to know more about us ? Never mind lets explore!</span>
+               <div style={{ paddingTop: "20px" }}>
+            <button type='button' className={`${styles.btn} ${styles.newBtnStyles} ${dashboardStyles.btnCustomStyles}`} onClick={handleClick}> Click to explore !</button>
           </div>
-        </div>
-      </center>
+      </div>
     </div>
+
+
+
   )
 }
 

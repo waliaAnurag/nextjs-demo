@@ -1,9 +1,10 @@
 body{
   background-color: #f0eff4;
-  color : #e2e8f0;
+  color : #000;
   margin:0px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
   overflow-x: hidden;
+  
 }
 
 h1{

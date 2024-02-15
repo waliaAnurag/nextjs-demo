@@ -27,7 +27,7 @@ function Dashboard(props) {
                 <title>Trending Books</title>
             </Head>
             <header>
-                <div><Link href={"/"}> <button type='button' className={`${pageStyles.btn} ${styles.navigationLinkStyles}`}> Home</button></Link><center><h1>Trending Book Library</h1></center></div>
+                <div><Link href={"/"}> <button type='button' className={`${pageStyles.btn} ${styles.navigationLinkStyles}`}> Home</button></Link><center><h1>Trending Books Library</h1></center></div>
             </header>
             <main className={styles.mainContentSectionStyles}>
                 <center>

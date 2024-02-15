@@ -1,13 +1,32 @@
 .mainContent {
-    height: 550px;
-    width: 500px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #6b808c;
-    border-radius: 10px;
+    height: 80%;
+    background-color: #e8e7e4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
 
+.overLayText{
+    position: absolute;
+    bottom: 0;
+    height: 30%;
+    border-radius: 15px;
+    width: 90%;
+    text-align: center;
+    padding: 15px;
+    color: #b9b3b1;
+}
+.newBtnStyles{
+   background-color: rgba(192, 255, 196, 0.541);;
+}
+.headingText{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.subheadingText{
+     color: #b9b3b1;
 }
 
 .btn{
