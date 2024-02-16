@@ -13,12 +13,13 @@
     height: 30%;
     border-radius: 15px;
     width: 90%;
-    text-align: center;
     padding: 15px;
+    padding-left: 80px;
     color: #b9b3b1;
 }
 .newBtnStyles{
-   background-color: rgba(192, 255, 196, 0.541);;
+   background-color: #309d74;
+   
 }
 .headingText{
     font-size: 20px;
@@ -30,7 +31,7 @@
 }
 
 .btn{
-    color: black;
+    color: white;
     font-weight: 600;
     height: 40px;
 }

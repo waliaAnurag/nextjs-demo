@@ -27,7 +27,7 @@ function Dashboard(props) {
                 <title>Trending Books</title>
             </Head>
             <header>
-                <div><Link href={"/"}> <button type='button' className={`${pageStyles.btn} ${styles.navigationLinkStyles}`}> Home</button></Link><center><h1>Trending Books Library</h1></center></div>
+                <div><Link href={"/"}> <button type='button' className={`${pageStyles.btn} ${styles.btnCustomStyles} ${styles.navigationLinkStyles}`}> Home</button></Link><center><h1>Trending Books Library</h1></center></div>
             </header>
             <main className={styles.mainContentSectionStyles}>
                 <center>
@@ -38,7 +38,7 @@ function Dashboard(props) {
                 </center>
             </main>
             <footer>
-                <button type='button' className={`${pageStyles.btn} ${styles.infoGraphicsCTA}`} onClick={redirectToInfoGrapics}>Next js infographics</button>
+                <button type='button' className={`${pageStyles.btn} ${styles.navigationLinkInfographics} ${styles.btnCustomStyles}`} onClick={redirectToInfoGrapics}>Next js infographics</button>
             </footer>
 
         </div>

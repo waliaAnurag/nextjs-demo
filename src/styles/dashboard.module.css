@@ -9,16 +9,16 @@
     overflow-x: hidden;
 }
 .contentHolder{
-    background-color: #fff;
+    /* background-color: #fff; */
     width: 80%;
     color: black;
 }
 
 .bookDetailContainer{
-    background-color: #6b808c;
+    /* background-color: #6b808c; */
     width: 80%;
     border-radius: 11px;
-    box-shadow: inset 0 0 5px 2px gray;
+    /* box-shadow: inset 0 0 5px 2px gray; */
     padding: 18px 0px 18px 0px;
 
 }
@@ -55,7 +55,17 @@
     transition: 0.2s;
     float: left;
    color: white;
-   background-color: rgba(192, 255, 196, 0.541);
+   background-color: #309d74;
+}
+.navigationLinkInfographics{
+    width: 190px !important;
+    height: 40px !important;
+    border-radius: 3px;
+    border: none;
+    transition: 0.2s;
+    float: center;
+   color: white;
+   background-color: #309d74;
 }
 .btnCustomStyles:hover{
    border-radius: 15px;
@@ -75,6 +85,7 @@
     font-weight: 800;
     text-align: center;
     margin-bottom: 10px;
+    color: #309d74;
 }
 .reviewStyles{
     margin: 10px 0px, 10px, 0px;
@@ -86,6 +97,7 @@
 .reviewerName{
     margin : 0px;
     font-style: italic;
+    color: #309d74;
 }
 
 .eachReviewSection{

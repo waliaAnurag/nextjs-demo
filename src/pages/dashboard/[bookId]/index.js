@@ -50,8 +50,12 @@ function BookInformation(props) {
   }
   return (
     <center >
+      <header>
+                <div><Link href={"/dashboard"}> <button type='button' className={`${pageStyles.btn} ${dashboardStyles.btnCustomStyles} ${dashboardStyles.navigationLinkStyles}`}> Dashboard</button></Link><center><h1>Trending Books Library</h1></center></div>
+            </header>
       <div className={dashboardStyles.bookDetailContainer}>
-      <div style={{marginLeft : "20px"}}><Link href={"/dashboard"}> <button type='button' className={`${pageStyles.btn} ${dashboardStyles.navigationLinkStyles}`}>Dashboard</button></Link></div>
+
+      
         <div>
           <Image
             src={image}
@@ -76,7 +80,7 @@ function BookInformation(props) {
         <div className={dashboardStyles.reviewInformation}>
           <textarea type="text" value={reviewText} placeholder='Add your Book review here' style={{padding : "10px", borderRadius:"5px" }} onChange={handleInput} />
           <div className={dashboardStyles.buttonpos}>
-            <button type='button' className={`${pageStyles["btn"]} ${dashboardStyles["btnCustomStyles"]}`} onClick={postreview}>Add your review</button>
+            <button type='button' className={`${pageStyles.btn} ${dashboardStyles.navigationLinkInfographics} ${dashboardStyles.btnCustomStyles}`} onClick={postreview}>Add your review</button>
           </div>
         </div>
         <div className={dashboardStyles.reviewHeading}>Customer Book Reviews</div>

@@ -40,12 +40,12 @@ function LandingPage() {
         
       }}>
         <span style={{fontSize:"25px"}}> Trending Books Library</span>
-         <div style={{marginTop: "30px", fontSize:"15px", color: "#b9b3b1"}}>
+         <div style={{marginTop: "30px", fontSize:"15px", color: "#309d74"}}>
             Find all trending books and download before they appear on store
          </div>
       </div>
       <div className={styles.overLayText}>
-               <span> Curious to know more about us ? Never mind lets explore!</span>
+               <span style={{color: "#309d74"}}> Curious to know more about us ? Never mind lets explore!</span>
                <div style={{ paddingTop: "20px" }}>
             <button type='button' className={`${styles.btn} ${styles.newBtnStyles} ${dashboardStyles.btnCustomStyles}`} onClick={handleClick}> Click to explore !</button>
           </div>
