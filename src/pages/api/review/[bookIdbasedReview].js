@@ -23,7 +23,7 @@ async function handler(req,res){
          
         }catch(error){
             console.log(error)
-            res.status(500).json({message:'error occurred while posting your review',error:error});
+            res.status(500).json({message:'error occurred while connecting to DB',error:error});
           
             return
         }
@@ -46,7 +46,7 @@ async function handler(req,res){
          
         }catch(error){
             console.log("error whiule connecting to DB",error)
-            res.status(500).json({message:'error occurred while posting your review',error:error});
+            res.status(500).json({message:'error occurred while connecting with your DB',error:error});
           
             return
         }

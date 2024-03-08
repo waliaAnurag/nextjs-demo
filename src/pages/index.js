@@ -1,16 +1,17 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import Image from 'next/image'
 import coverImage from '../asset/homeScreenPlantImage.jpg'
 import styles from "../styles/page.module.css";
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import dashboardStyles from "../styles/dashboard.module.css"
+
 function LandingPage() {
   const router = useRouter();
 
   function handleClick(e) {
     e.preventDefault();
-    router.push('/dashboard');
+    router.push('/auth/signup');
   }
 
   return (

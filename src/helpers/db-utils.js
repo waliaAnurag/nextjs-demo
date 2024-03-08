@@ -3,7 +3,7 @@ import { MongoClient } from 'mongodb';
 export async function connectDataBase(){
   try{
     const client = await MongoClient.connect(process.env.MONGO_DB_URL)
-    
+     console.log(client)
     return client
   }catch(err){
  
