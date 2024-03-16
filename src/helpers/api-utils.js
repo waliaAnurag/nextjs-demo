@@ -19,7 +19,7 @@ export async function getBookReview(bookId){
     let finalFetchedBookReview = [];
     let response =await fetch(`/api/review/${bookId}`);
     let booksReviews = await response.json();
-    console.log("this is book review from api utils ",booksReviews)
+   
     let fetchedBookReview = booksReviews.review.filter((ele)=>ele.id == bookId)
     if(fetchedBookReview.length > 0 ){
         finalFetchedBookReview = fetchedBookReview;

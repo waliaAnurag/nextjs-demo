@@ -2,7 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import HeaderNavLink from './headerNavLink';
 import SearchField from '../searchField';
-import HeaderStyles from '../styles/header.module.css'
+import HeaderStyles from '../styles/header.module.css';
+
 const menuItems = [
   { label: `Home`, url: `/app-router-demo` },
   { label: `Dashboard`, url: `/app-router-demo/appDashboard/analytics` },

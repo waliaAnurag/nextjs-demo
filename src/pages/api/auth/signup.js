@@ -14,7 +14,7 @@ async function handler(req, res) {
         }
         try {
             client = await connectDataBase();
-            console.log("client recived on api ",client)
+          
         } catch (error) {
            
             res.status(500).json({ message: 'error occurred while connecting with db', error: error });
@@ -24,13 +24,13 @@ async function handler(req, res) {
 
         try {
             const db = client.db("trendingBookLibrary");
-            const hashedPassword = hashPassword(password);
-            const result = await db.collection("users").insertOne({
+            const hashedPassword = await hashPassword(password);
+            await db.collection("users").insertOne({
                 email: email,
                 password: hashedPassword
             })
 
-            client.close
+            client.close();
         } catch (error) {
             res.status(500).json({ message: 'Insert into DB failed !', error: error });
             client.close();

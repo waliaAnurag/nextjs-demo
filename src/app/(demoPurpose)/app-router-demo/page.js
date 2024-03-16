@@ -1,14 +1,17 @@
 "use client"
 import AppStyles from '../../../styles/appHomeStyles.module.css';
-
+import Head from 'next/head';
 const Home = () => {
-  console.log("runningx")
+ 
     return (
       <main className={AppStyles.mainAppContainer}>
+            <Head>
+                <title>App Route Demo</title>
+            </Head>
         <h1 className="text-5xl font-bold text-gray-900 leading-[1.4] mb-5">
           Mini Demo for App Router (Intro)
         </h1>
-        <p className="text-2xl text-gray-700">
+        <div className="text-2xl text-gray-700">
          Topics covered in this demo are :
           <li className={AppStyles.liStyles}>
           1.   App router navigation and difference from page router
@@ -24,7 +27,7 @@ const Home = () => {
           </li>
          
           
-        </p>
+        </div>
       </main>
     );
   };

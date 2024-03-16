@@ -1,8 +1,12 @@
 import { useState, useRef } from 'react';
 import classes from '../../styles/auth-form.module.css';
-
+import {signIn,signOut} from "next-auth/react"
+import styles from "../../styles/page.module.css";
+import dashboardStyles from "../../styles/dashboard.module.css"
+import { useRouter } from 'next/router';
 function AuthForm() {
   const [isLogin, setIsLogin] = useState(true);
+  const router = useRouter();
   const emailInputRef = useRef();
   const passwordRef = useRef();
   function switchAuthModeHandler() {
@@ -17,18 +21,7 @@ function AuthForm() {
         'Content-Type' : 'application/json'
       }
     });
-    console.log("I am called")
-    // let bookId = 12345
-    // const requestBody = {
-    //   bookReview: "this is great"
-    // }
-    // const response = await fetch(`/api/review/${bookId}`, {
-    //   method: 'PUT',
-    //   body: JSON.stringify(requestBody),
-    //   headers: {
-    //     'Content-Type': 'application/json'
-    //   }
-    // })
+    
    
     const data = await response.json();
     if(!response.ok){
@@ -41,13 +34,21 @@ function AuthForm() {
     const enteredEmail = emailInputRef.current.value;
     const enteredPassword = passwordRef.current.value;
     evt.preventDefault();
+    
     if(isLogin){
+      const result = await signIn('credentials',{redirect : false,email:enteredEmail,password:enteredPassword})
 
+      if(!(result.error)){
+        router.push(`/dashboard`);
+      }else{
+        alert("Wrong crendentials please re enter");
+      }
+     
     }
     else{
       try{
         const result = await createUser(enteredEmail,enteredPassword)
-        console.log(result)
+       
       }catch(errr){
         console.log("error occurred",errr)
       }
@@ -69,10 +70,10 @@ function AuthForm() {
           <input type='password' id='password' required ref={passwordRef} />
         </div>
         <div className={classes.actions}>
-          <button>{isLogin ? 'Login' : 'Create Account'}</button>
+          <button className={`${styles.btn} ${classes.toggle} ${styles.loginBtnColor} ${dashboardStyles.btnCustomStyles} ${dashboardStyles.marginLeft}`}>{isLogin ? 'Login' : 'Create Account'}</button>
           <button
             type='button'
-            className={classes.toggle}
+            className={`${styles.btn} ${classes.toggle} ${styles.newBtnStyles} ${dashboardStyles.btnCustomStyles} ${dashboardStyles.marginLeft}`}
             onClick={switchAuthModeHandler}
           >
             {isLogin ? 'Create new account' : 'Login with existing account'}

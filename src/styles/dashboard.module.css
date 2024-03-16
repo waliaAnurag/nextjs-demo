@@ -99,7 +99,18 @@
     font-style: italic;
     color: #309d74;
 }
-
+.headerContainer{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.marginLeft{
+    margin-left:20px
+}
+.alignselfCenter{
+    align-self: center;
+}
 .eachReviewSection{
     margin-top : 20px;
     border-bottom: 1px dotted black;
