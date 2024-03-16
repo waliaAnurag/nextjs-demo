@@ -17,9 +17,18 @@
     padding-left: 80px;
     color: #b9b3b1;
 }
+.overLayHeader{
+    position: absolute;
+    top: 20vh;
+    
+}
 .newBtnStyles{
    background-color: #309d74;
    
+}
+.loginBtnColor{
+    background-color: #e8e7e3;
+    color : #309d74 !important;
 }
 .headingText{
     font-size: 20px;

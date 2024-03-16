@@ -12,9 +12,11 @@
     "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "mongodb": "^6.3.0",
     "mongoose": "^8.1.1",
     "next": "14.1.0",
+    "next-auth": "^4.24.7",
     "react": "^18",
     "react-dom": "^18"
   }
