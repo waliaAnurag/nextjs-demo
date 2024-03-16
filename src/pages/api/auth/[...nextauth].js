@@ -16,7 +16,7 @@ export default NextAuth({
                 const userCollection = client.db("trendingBookLibrary").collection("users");
                 const user = await userCollection.findOne({email:credentials.email})
                 if(!user){ //user is undefined otherwise an object if found
-                    console.log("this is inside if")
+                   
                     throw new Error("user not found !")
                 }
                 const isValid = await verifyPassword(credentials.password,user.password)

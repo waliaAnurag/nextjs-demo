@@ -6,7 +6,7 @@ import navLinkStyles from './navLink.module.css'
 const DashboardNavLink = ({ href, children }) => {
   const pathname = usePathname();
   const active = href === pathname;
-console.log(" i am dashboard Link")
+
   return (
     <Link
       href={href}
