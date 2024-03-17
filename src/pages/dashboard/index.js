@@ -67,9 +67,7 @@ export async function getStaticProps() {
     try {
 
         client = await connectDataBase();
-        console.log("client variable ",client);
         response = await getAllDocuments(client, "bookList", { _id: -1 });
-        console.log(response,"this is response")
 
         client.close();
     } catch (err) {
