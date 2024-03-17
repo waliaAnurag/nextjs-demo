@@ -1,11 +1,19 @@
 import { hashPassword } from "@/helpers/auth";
 const { connectDataBase} = require("@/helpers/db-utils");
+import { getToken } from 'next-auth/jwt';
 
 async function handler(req, res) {
+    
     let client;
+    const secret = process.env.NEXT_AUTH_TOKEN;
+    const token = await getToken({ req, secret });
+    
+    if (!token) {
+        return res.status(401).json({ message: 'Not authenticated' });
+      }
     if (req.method == "POST") {
-
-
+       
+        
         const data = req.body
         const { email, password } = data;
         if (!email || !email.includes("@") || !password || password.trim().length < 7) {
