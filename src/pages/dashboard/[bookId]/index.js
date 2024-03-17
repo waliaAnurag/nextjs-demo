@@ -38,7 +38,7 @@ function BookInformation(props) {
 }
   function postreview(e) {
     e.preventDefault();
-    console.log(e)
+   
     const requestBody = {
       bookReview: reviewText
     }
@@ -120,8 +120,9 @@ export async function getServerSideProps(context) {
     let client;
     let response;
     client = await connectDataBase();
+    console.log("client variable ",client);
     response = await getAllDocuments(client, "bookList", { _id: -1 });
-
+    console.log(response,"this is response")
     client.close();
 
 
