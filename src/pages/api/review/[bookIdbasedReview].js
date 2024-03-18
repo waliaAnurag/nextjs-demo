@@ -5,12 +5,12 @@ async function handler(req,res){
 
     let client;
     let bookReviewData;
-    // const secret = process.env.NEXT_AUTH_TOKEN;
-    // const token = await getToken({ req, secret });
+    const secret = process.env.NEXT_AUTH_TOKEN;
+    const token = await getToken({ req, secret });
     
-    // if (!token) {
-    //     return res.status(401).json({ message: 'Not authenticated' });
-    //   }
+    if (!token) {
+        return res.status(401).json({ message: 'Not authenticated' });
+      }
     if(req.method === 'PUT'){
      
            
