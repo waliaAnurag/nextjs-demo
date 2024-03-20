@@ -25,7 +25,7 @@ function Dashboard(props) {
     function SignOutHandler(){
         
        
-        signOut({ redirect: false }).then(() => {
+        signOut({ redirect: true }).then(() => {
             router.push("/"); // Redirect to the dashboard page after signing out
         });
         
