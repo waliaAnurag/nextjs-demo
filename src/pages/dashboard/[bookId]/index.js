@@ -32,7 +32,7 @@ function BookInformation(props) {
     setReviewText(e.target.value)
   }
   function SignOutHandler(){
-    signOut({ redirect: false }).then(() => {
+    signOut({ redirect: true }).then(() => {
       router.push("/"); 
   });
 }
