@@ -6,8 +6,8 @@ import HeaderStyles from '../styles/header.module.css';
 
 const menuItems = [
   { label: `Home`, url: `/app-router-demo` },
-  { label: `Dashboard`, url: `/app-router-demo/appDashboard/analytics` },
-  { label: `React server Components`, url: `/app-router-demo/newsletter` },
+  { label: `Dashboard`, url: `/app-router-demo/appDashboard/appRouter` },
+  { label: `React server Components`, url: `/app-router-demo/RSC` },
 ];
 
 const Header = () => {
