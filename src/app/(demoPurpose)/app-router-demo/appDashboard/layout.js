@@ -7,17 +7,17 @@ const DashboardLayout = ({ children }) => {
         <nav>
           <div className={dashboardLayoutStyles.listStyles}>
             <li className={dashboardLayoutStyles.listItemStyles}>
-              <DashboardNavLink href="/app-router-demo/appDashboard/analytics">
+              <DashboardNavLink href="/app-router-demo/appDashboard/appRouter">
                 App Router
               </DashboardNavLink>
             </li>
             <li className={dashboardLayoutStyles.listItemStyles}>
-              <DashboardNavLink href="/app-router-demo/appDashboard/account">
+              <DashboardNavLink href="/app-router-demo/appDashboard/rendering">
                 Rendering
               </DashboardNavLink>
             </li>
             <li className={dashboardLayoutStyles.listItemStyles}>
-              <DashboardNavLink href="/app-router-demo/appDashboard/settings">
+              <DashboardNavLink href="/app-router-demo/appDashboard/serverComponents">
                 Server Components
               </DashboardNavLink>
             </li>
